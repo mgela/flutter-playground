@@ -5,6 +5,6 @@ import './pages/landing.dart';
 
 void main() {
   runApp(new MaterialApp(
-    home: new SecondPage(),
+    home: new LandingPage(),
   ));
 }
