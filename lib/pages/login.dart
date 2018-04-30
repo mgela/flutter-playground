@@ -4,7 +4,7 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return new Material(
-      color: Colors.red[400],
+      color: Colors.red[100],
       child: new InkWell(
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -20,7 +20,7 @@ class SecondPage extends StatelessWidget {
                 Navigator.pop(context);
               },
             )
-            
+
           ],
         ),
       )
