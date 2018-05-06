@@ -12,7 +12,7 @@ class LandingPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 new InkWell(
-                  child: new Text("Navigate FirstScreen",
+                  child: new Text("Navigate FirstScreenzor",
                       style: new TextStyle(
                           color: Colors.limeAccent,
                           fontSize: 20.0,

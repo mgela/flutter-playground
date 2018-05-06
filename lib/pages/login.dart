@@ -9,20 +9,20 @@ class SecondPage extends StatelessWidget {
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              new InkWell(
-                child: new Text(
-                  "BACK",
-                  style: new TextStyle(
-                      color: Colors.white,
-                      fontSize: 50.0,
-                      fontWeight: FontWeight.bold),
+              new Text(
+                "BACK",
+                style: new TextStyle(
+                    color: Colors.cyanAccent,
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold
                 ),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+
               )
             ],
           ),
+          onTap: () {
+            Navigator.pop(context);
+          },
         ));
   }
 }
