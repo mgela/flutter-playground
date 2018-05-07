@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+Future<Post> fetchPost() async {
+  final response = await http.get('https://randomuser.me/api/');
+  final responseJson = json.decode(response.body);
+
+  return new Post.fromJson(responseJson);
+}
+
 class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -26,3 +33,5 @@ class MainPage extends StatelessWidget {
         ));
   }
 }
+
+
