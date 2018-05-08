@@ -1,11 +1,17 @@
-import 'package:flutter/material.dart';
+//import 'dart:async';
+import 'dart:convert';
 
-Future<Post> fetchPost() async {
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+
+
+fetchPost() async {
   final response = await http.get('https://randomuser.me/api/');
   final responseJson = json.decode(response.body);
-
-  return new Post.fromJson(responseJson);
+  print(responseJson);
+//  return new Post.fromJson(responseJson);
 }
+
 
 class MainPage extends StatelessWidget {
   @override
@@ -17,7 +23,7 @@ class MainPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Text(
-                "BACK",
+                "API",
                 style: new TextStyle(
                     color: Colors.lightBlueAccent,
                     fontSize: 30.0,
@@ -28,7 +34,7 @@ class MainPage extends StatelessWidget {
             ],
           ),
           onTap: () {
-            Navigator.pop(context);
+            fetchPost();
           },
         ));
   }
